@@ -1,4 +1,8 @@
 #!/bin/bash
-echo "Setting Python 3.13 as the default..."
-export PYTHONPATH="/usr/local/lib/python3.13/site-packages"
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt/python@3.13/bin:$PATH"
+echo "Setting Python 3.9 as default for Elastic Beanstalk..."
+if [ -f /usr/bin/python3.9 ]; then
+    ln -sf /usr/bin/python3.9 /usr/bin/python3
+    ln -sf /usr/bin/python3.9 /usr/bin/python
+else
+    echo "Python 3.9 is not available on this machine."
+fi
