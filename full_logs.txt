@@ -1,0 +1,4 @@
+Retrieving logs...
+Logs were saved to /Users/tonywilson/Documents/PsychSafetyApp/.elasticbeanstalk/logs/250219_235155
+Logs were saved to /Users/tonywilson/Documents/PsychSafetyApp/.elasticbeanstalk/logs/250219_235155
+Updated symlink at /Users/tonywilson/Documents/PsychSafetyApp/.elasticbeanstalk/logs/latest

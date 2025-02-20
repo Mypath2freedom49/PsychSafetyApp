@@ -1,0 +1,107 @@
+Retrieving logs...
+============= i-05bde7a6081d44370 ==============
+----------------------------------------
+/var/log/eb-engine.log
+----------------------------------------
+2025/02/20 04:12:40.111619 [INFO] Running command: systemctl is-active cfn-hup.service
+2025/02/20 04:12:40.115848 [INFO] Running command: systemctl start cfn-hup.service
+2025/02/20 04:12:40.165448 [INFO] Instance has NOT been bootstrapped
+2025/02/20 04:12:40.165464 [INFO] Executing instruction: SetupPublishLogCronjob
+2025/02/20 04:12:40.165468 [INFO] Setup publish logs cron job...
+2025/02/20 04:12:40.165472 [INFO] Copying file /opt/elasticbeanstalk/config/private/logtasks/cron/publishlogs to /etc/cron.d/publishlogs
+2025/02/20 04:12:40.167767 [INFO] Instance has NOT been bootstrapped
+2025/02/20 04:12:40.167779 [INFO] Executing instruction: MarkBootstrapped
+2025/02/20 04:12:40.167783 [INFO] Starting MarkBootstrapped
+2025/02/20 04:12:40.167788 [INFO] Instance has NOT been bootstrapped
+2025/02/20 04:12:40.167852 [INFO] Marked instance as Bootstrapped
+2025/02/20 04:12:40.167856 [INFO] Executing instruction: Save CFN Stack Info
+2025/02/20 04:12:40.167896 [INFO] Executing cleanup logic
+2025/02/20 04:12:40.167906 [INFO] Platform Engine finished execution on command: env-launch
+
+2025/02/20 04:14:41.655385 [INFO] Starting...
+2025/02/20 04:14:41.655432 [INFO] Starting EBPlatform-PlatformEngine
+2025/02/20 04:14:41.655452 [INFO] reading event message file
+2025/02/20 04:14:41.655757 [INFO] Engine received EB command cfn-hup-exec
+
+2025/02/20 04:14:41.719701 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-west-2:289763452124:stack/awseb-e-b88gw5r9bc-stack/cd29aa60-ef40-11ef-b0bd-0617eea615db -r AWSEBAutoScalingGroup --region us-west-2
+2025/02/20 04:14:42.117484 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-west-2:289763452124:stack/awseb-e-b88gw5r9bc-stack/cd29aa60-ef40-11ef-b0bd-0617eea615db -r AWSEBBeanstalkMetadata --region us-west-2
+2025/02/20 04:14:42.545054 [INFO] checking whether command app-deploy is applicable to this instance...
+2025/02/20 04:14:42.545066 [INFO] this command is applicable to the instance, thus instance should execute command
+2025/02/20 04:14:42.545069 [INFO] Engine command: (app-deploy)
+
+2025/02/20 04:14:42.545073 [INFO] Downloading EB Application...
+2025/02/20 04:14:42.545076 [INFO] Region: us-west-2
+2025/02/20 04:14:42.545078 [INFO] envID: e-b88gw5r9bc
+2025/02/20 04:14:42.545086 [INFO] envBucket: elasticbeanstalk-us-west-2-289763452124
+2025/02/20 04:14:42.545089 [INFO] accountID: 289763452124
+2025/02/20 04:14:42.545092 [INFO] Using manifest file name from command request
+2025/02/20 04:14:42.545099 [INFO] Unable to get version manifest file.
+2025/02/20 04:14:42.545101 [INFO] Downloading latest manifest available.
+2025/02/20 04:14:42.545104 [INFO] Download latest app version manifest
+2025/02/20 04:14:42.545241 [INFO] resources/environments/e-b88gw5r9bc/_runtime/versions/manifest
+2025/02/20 04:14:42.582719 [INFO] latestManifest key *: resources/environments/e-b88gw5r9bc/_runtime/versions/manifest_1740024706605
+
+2025/02/20 04:14:42.583046 [INFO] Downloading: bucket: elasticbeanstalk-us-west-2-289763452124, object: resources/environments/e-b88gw5r9bc/_runtime/versions/manifest_1740024706605, expected bucket owner: 289763452124
+2025/02/20 04:14:42.616473 [INFO] Download successful149bytes downloaded
+2025/02/20 04:14:42.616571 [INFO] Trying to read and parse version manifest...
+2025/02/20 04:14:42.616651 [INFO] Downloading: bucket: elasticbeanstalk-us-west-2-289763452124, object: resources/environments/e-b88gw5r9bc/_runtime/_versions/psych-safety-app/app-250219_221133919480, expected bucket owner: 289763452124
+2025/02/20 04:14:42.795265 [INFO] Download successful6603200bytes downloaded
+2025/02/20 04:14:42.795558 [INFO] Executing instruction: ElectLeader
+2025/02/20 04:14:42.795564 [INFO] Running leader election for instance i-05bde7a6081d44370...
+2025/02/20 04:14:42.795566 [INFO] Calling the cfn-elect-cmd-leader to elect the command leader.
+2025/02/20 04:14:42.795577 [INFO] Running command: /opt/aws/bin/cfn-elect-cmd-leader --stack arn:aws:cloudformation:us-west-2:289763452124:stack/awseb-e-b88gw5r9bc-stack/cd29aa60-ef40-11ef-b0bd-0617eea615db --command-name ElasticBeanstalkCommand-AWSEBAutoScalingGroup --invocation-id d2573f25-8455-456f-bc0b-617c574009d9 --listener-id i-05bde7a6081d44370 --region us-west-2
+2025/02/20 04:14:43.182378 [INFO] Instance is Leader.
+2025/02/20 04:14:43.182421 [INFO] Executing instruction: stopSqsd
+2025/02/20 04:14:43.182470 [INFO] This is a web server environment instance, skip stop sqsd daemon ...
+2025/02/20 04:14:43.182476 [INFO] Executing instruction: PreBuildEbExtension
+2025/02/20 04:14:43.182480 [INFO] Starting executing the config set Infra-EmbeddedPreBuild.
+2025/02/20 04:14:43.182494 [INFO] Running command: /opt/aws/bin/cfn-init -s arn:aws:cloudformation:us-west-2:289763452124:stack/awseb-e-b88gw5r9bc-stack/cd29aa60-ef40-11ef-b0bd-0617eea615db -r AWSEBAutoScalingGroup --region us-west-2 --configsets Infra-EmbeddedPreBuild
+2025/02/20 04:14:43.572727 [INFO] Finished executing the config set Infra-EmbeddedPreBuild.
+
+2025/02/20 04:14:43.572745 [INFO] Executing instruction: StageApplication
+2025/02/20 04:14:43.572748 [INFO] Recreating /var/app/staging/
+2025/02/20 04:14:43.573290 [INFO] extracting /opt/elasticbeanstalk/deployment/app_source_bundle to /var/app/staging/
+2025/02/20 04:14:43.573302 [INFO] Running command: /usr/bin/unzip -q -o /opt/elasticbeanstalk/deployment/app_source_bundle -d /var/app/staging/
+2025/02/20 04:14:43.859810 [INFO] finished extracting /opt/elasticbeanstalk/deployment/app_source_bundle to /var/app/staging/ successfully
+2025/02/20 04:14:43.860662 [ERROR] An error occurred during execution of command [app-deploy] - [StageApplication]. Stop running the command. Error: chown /var/app/staging/venv/bin/python: no such file or directory 
+
+2025/02/20 04:14:43.860669 [INFO] Executing cleanup logic
+2025/02/20 04:14:43.860760 [INFO] CommandService Response: {"status":"FAILURE","api_version":"1.0","results":[{"status":"FAILURE","msg":"Engine execution has encountered an error.","returncode":1,"events":[{"msg":"Instance deployment failed. For details, see 'eb-engine.log'.","timestamp":1740024883860,"severity":"ERROR"}]}]}
+
+2025/02/20 04:14:43.860899 [INFO] Platform Engine finished execution on command: app-deploy
+
+2025/02/20 04:21:06.810776 [INFO] Starting...
+2025/02/20 04:21:06.814286 [INFO] Starting EBPlatform-PlatformEngine
+2025/02/20 04:21:06.815029 [INFO] reading event message file
+2025/02/20 04:21:06.816243 [INFO] Engine received EB command cfn-hup-exec
+
+2025/02/20 04:21:06.923804 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-west-2:289763452124:stack/awseb-e-b88gw5r9bc-stack/cd29aa60-ef40-11ef-b0bd-0617eea615db -r AWSEBAutoScalingGroup --region us-west-2
+2025/02/20 04:21:07.299499 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-west-2:289763452124:stack/awseb-e-b88gw5r9bc-stack/cd29aa60-ef40-11ef-b0bd-0617eea615db -r AWSEBBeanstalkMetadata --region us-west-2
+2025/02/20 04:21:07.631690 [INFO] checking whether command tail-log is applicable to this instance...
+2025/02/20 04:21:07.631704 [INFO] this command is applicable to the instance, thus instance should execute command
+2025/02/20 04:21:07.631707 [INFO] Engine command: (tail-log)
+
+2025/02/20 04:21:07.631762 [INFO] Executing instruction: GetTailLogs
+2025/02/20 04:21:07.631765 [INFO] Tail Logs...
+2025/02/20 04:21:07.632064 [INFO] Running command: tail -n 100 /var/log/eb-engine.log
+2025/02/20 04:21:07.704406 [INFO] Executing cleanup logic
+2025/02/20 04:21:07.704497 [INFO] CommandService Response: {"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"Engine execution has succeeded.","returncode":0,"events":[{"msg":"Instance deployment completed successfully.","timestamp":1740025267704,"severity":"INFO"}]}]}
+
+2025/02/20 04:21:07.704618 [INFO] Platform Engine finished execution on command: tail-log
+
+2025/02/20 04:28:52.387520 [INFO] Starting...
+2025/02/20 04:28:52.387571 [INFO] Starting EBPlatform-PlatformEngine
+2025/02/20 04:28:52.387590 [INFO] reading event message file
+2025/02/20 04:28:52.391023 [INFO] Engine received EB command cfn-hup-exec
+
+2025/02/20 04:28:52.472453 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-west-2:289763452124:stack/awseb-e-b88gw5r9bc-stack/cd29aa60-ef40-11ef-b0bd-0617eea615db -r AWSEBAutoScalingGroup --region us-west-2
+2025/02/20 04:28:52.825831 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-west-2:289763452124:stack/awseb-e-b88gw5r9bc-stack/cd29aa60-ef40-11ef-b0bd-0617eea615db -r AWSEBBeanstalkMetadata --region us-west-2
+2025/02/20 04:28:53.172359 [INFO] checking whether command tail-log is applicable to this instance...
+2025/02/20 04:28:53.172370 [INFO] this command is applicable to the instance, thus instance should execute command
+2025/02/20 04:28:53.172373 [INFO] Engine command: (tail-log)
+
+2025/02/20 04:28:53.172429 [INFO] Executing instruction: GetTailLogs
+2025/02/20 04:28:53.172432 [INFO] Tail Logs...
+2025/02/20 04:28:53.172690 [INFO] Running command: tail -n 100 /var/log/eb-engine.log
+
+
