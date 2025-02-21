@@ -80,5 +80,5 @@ def send_email_route():
         return "Error sending email. Please try again."
 
 # Run Flask app
-if __name__ == "__main__":
+
     app.run(debug=True, host="0.0.0.0", port=5000)
