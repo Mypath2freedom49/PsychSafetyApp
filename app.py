@@ -64,7 +64,7 @@ def send_email(recipient_email, subject, body):
         return False
 
 # Routes
-@app.route("/")
+
 def index():
     return render_template("index.html")
 
