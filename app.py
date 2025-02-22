@@ -68,7 +68,7 @@ def send_email(recipient_email, subject, body):
 def index():
     return render_template("index.html")
 
-@app.route("/send_email", methods=["POST"])
+
 def send_email_route():
     recipient_email = request.form["email"]
     subject = "Psychological Safety Assessment"
