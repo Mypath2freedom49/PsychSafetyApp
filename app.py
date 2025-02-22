@@ -65,7 +65,7 @@ def send_email(recipient_email, subject, body):
 
 # Routes
 
-def index():
+
     return render_template("index.html")
 
 
